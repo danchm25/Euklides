@@ -5,17 +5,25 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        int number;
+        int number1;
+        int number2;
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Prosze podać liczbe calkowitą (4-100): ");
-        number = scanner.nextInt();
-        for (int i = 1; i <= number; i++)
+        System.out.println("Prosze podać pierwsza liczbe: ");
+        number1 = scanner.nextInt();
+        System.out.println("Porsze podac drugą liczbe: ");
+        number2 = scanner.nextInt();
+        while (number2!= number1)
         {
-            if (number % i == 0)
+            if(number2 > number1)
             {
-                System.out.println(i);
+                number2 = number2 - number1;
             }
+            else
+
+                number1 = number1 - number2;
+
         }
+        System.out.println("Najwiekszym wspólnym dzielnikiem jest" + number2);
 
     }
 }
